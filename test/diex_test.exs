@@ -1,4 +1,5 @@
 defmodule DiexTest do
+  @moduledoc false
   use ExUnit.Case
   doctest Diex
 

@@ -1,16 +1,15 @@
 # Diex
 
-**TODO: Add description**
+Macros for simple dependency injection and dynamic dispatching in Elixir
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `diex` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `diex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:diex, "~> 0.1.0"}
+    {:diex, "~> 0.0.1"}
   ]
 end
 ```
