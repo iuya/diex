@@ -1,4 +1,6 @@
 defmodule Diex.MixProject do
+  @moduledoc false
+
   use Mix.Project
 
   def project do
@@ -25,7 +27,8 @@ defmodule Diex.MixProject do
   defp deps do
     [
       {:ex_doc, "~> 0.21", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false},
+      {:credo, "~> 1.1.0", only: [:dev, :test], runtime: false}
     ]
   end
 
@@ -37,12 +40,12 @@ defmodule Diex.MixProject do
 
   defp package() do
     [
-      files: ["lib", "mix.exs", "README.md"],
+      files: ["lib", "mix.exs", "README.md", "COPYING"],
       maintainers: ["Ignacio Uyá"],
       licenses: ["GNU GPLv3"],
       links: %{
-        "GitHub" => "https://github.com/yosriady/simple_statistics",
-        "Docs" => "https://hexdocs.pm/simple_statistics/"
+        "GitHub" => "https://github.com/iuya/diex",
+        "Docs" => "https://hexdocs.pm/diex/"
       }
     ]
   end
