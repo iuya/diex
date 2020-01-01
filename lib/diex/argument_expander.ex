@@ -5,7 +5,7 @@ defmodule Diex.ArgumentExpander do
   """
 
   @doc """
-  Given a module name and argument count, create the corresponding ast list.
+  Given a module name and argument count (arity), create the corresponding ast list.
       iex> Diex.ArgumentExpander.create_args(Diex, 0)
       []
       iex> Diex.ArgumentExpander.create_args(Diex, 2)
