@@ -30,6 +30,19 @@ iex> GreetingAdapter.greet()
 "Hello World!"
 ```
 
+### Defining an adapter in the config files
+
+The only requirement for the adapter argument is that it has a concrete value in compile since that's what `defdelegate` mandates; we could
+have runtime adapters by replacing `defdelegate` with a plain old `def` and calling `adapter.function()` inside, but that's for version 2.0.
+
+In any case, we can use `Application.compile_env/2` like so:
+
+```elixir
+use Diex, adapter: Application.compile_env(:my_application, :adapters)[__MODULE__]
+```
+
+But this is just an example; as long as you can retrieve a module name via `compile_env` it will work.
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
