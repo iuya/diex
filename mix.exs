@@ -4,34 +4,41 @@ defmodule Diex.MixProject do
   def project do
     [
       app: :diex,
-      version: "0.0.1",
-      elixir: "~> 1.9",
+      version: "1.0.0",
+      elixir: "~> 1.14",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/iuya/diex",
+      homepage_url: "https://github.com/iuya/diex"
     ]
   end
 
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: []
     ]
   end
 
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:ex_doc, "~> 0.21", only: :dev, runtime: false},
-      {:dialyxir, "~> 1.0.0-rc.7", only: [:dev], runtime: false}
+      {:credo, "~> 1.6", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.2", only: :dev, runtime: false},
+      {:ex_doc, "~> 0.29.1", only: :dev, runtime: false}
     ]
   end
 
   defp description() do
     ~S"""
-    Dependency injection and dynamic dispatching macros for Exilir.
+    Dynamic dispatching macros for Elixir.
+
+    Because there is only some many times you can write them before decicing
+    to learn how to do macros, automate it and be amazed at the lack of
+    circular dependency errors.
     """
   end
 
@@ -39,10 +46,10 @@ defmodule Diex.MixProject do
     [
       files: ["lib", "mix.exs", "README.md"],
       maintainers: ["Ignacio Uyá"],
-      licenses: ["GNU GPLv3"],
+      licenses: ["BSD-2-Clause"],
       links: %{
-        "GitHub" => "https://github.com/yosriady/simple_statistics",
-        "Docs" => "https://hexdocs.pm/simple_statistics/"
+        "GitHub" => "https://github.com/iuya/diex",
+        "Docs" => "https://hexdocs.pm/diex/"
       }
     ]
   end
