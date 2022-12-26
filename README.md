@@ -26,7 +26,7 @@ defmodule GreetingAdapter do
   def greet(), do: "Hello World!"
 end
 
-iex> GreetingAdapter.greet()
+iex> Greetable.greet()
 "Hello World!"
 ```
 
